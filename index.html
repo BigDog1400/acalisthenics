@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1>Acalisthenics APP <img src="img/logo-white.png" alt="Acalisthenics" height="74px" /></h1>
+    </header>
+    <main>
+      <div class="nav">
+        <div id="view-0" class="nav__view nav__view-active"><span>Entrenar</span></div>
+        <div id="view-1" class="nav__view"><span>Historial</span></div>
+        <div id="view-2" class="nav__view profile">Icon</div>
+      </div>
+      <div class="app">
+        <div class="app__main-section">
+          <div class="input-data">
+            <div class="input-exercise">
+              <span>Nombre</span>
+              <input class="input-exercise-name" type="text" maxlength="40" value="" size="6" />
+            </div>
+            <div class="input-sets">
+              <span>Sets </span>
+              <input class="input-exercise-sets" value="0" type="text" maxlength="3" size="2" />
+            </div>
+            <div class="input-reps">
+              <span>Reps</span>
+              <input class="input-exercise-reps" value="0" type="text" maxlength="3" size="2" />
+            </div>
+            <div class="btn-add">
+              <button class="btn-add-img">
+                <img src="img/add-circle-outline.svg" alt="Agregar" height="35px" />
+              </button>
+            </div>
+          </div>
+          <div class="exercise-guide">
+            <div class="exercise-name">Nombre</div>
+            <div class="exercise-sets">Sets</div>
+            <div class="exercise-reps">Reps</div>
+            <div class="exercise-actions">Entrenar</div>
+          </div>
+          <div class="app__exercise-list"></div>
+          <button id="btn-list-action" class="btn-list-done">Rutina Lista - Iniciar</button>
+        </div>
+        <div class="app__history-section">
+          <div>Coming soon...</div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <audio src="sound/zapsplat.mp3" id="sound_alarm"></audio>
+  <script src="js/script.js"></script>
+</html>

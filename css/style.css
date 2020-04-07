@@ -1,0 +1,331 @@
+/* Global styles
+------------------------------------*/
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background: #00b4db; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #0083b0, #00b4db); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #0083b0, #00b4db);
+}
+
+h1 {
+  font-family: "Anton";
+  color: #ebf2fa;
+  font-size: 30px;
+}
+
+button,
+body,
+input {
+  font-family: "Lato";
+}
+/* Header
+------------------------------------*/
+
+header {
+  text-align: center;
+}
+
+/* Main Section
+------------------------------------*/
+
+main {
+  min-height: 500px;
+  min-width: 300px;
+  margin: 0 auto;
+  max-width: 600px;
+  display: flex;
+  flex-flow: column;
+  background: #3685b5;
+  overflow: hidden;
+}
+
+/* Nav Bar
+------------------------------------*/
+.nav {
+  font-weight: 600;
+  display: flex;
+  flex-flow: column;
+  background: #3685b5;
+  flex: 0 1 auto;
+  border-bottom: 1px solid black;
+}
+
+.nav__view {
+  height: 25px;
+  align-items: center;
+  display: flex;
+  padding: 20px;
+  justify-content: center;
+}
+
+.nav__view:hover {
+  cursor: pointer;
+  background: #58a1ce;
+}
+
+.nav__view-active {
+  color: #ebf2fa;
+  background: #69a3c7;
+  border-bottom: 1px white solid;
+}
+
+/*Body app
+-----------------------------*/
+.app {
+  display: flex;
+  flex: 1 0 auto;
+  transition: transform 0.4s;
+}
+
+.app__main-section,
+.history-section-app {
+  flex: 1 0 100%;
+  display: flex;
+  flex-flow: column;
+}
+
+/* Input fields
+------------------------------------*/
+.input-data {
+  font-weight: 600;
+  padding: 10px 0px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background: #3685b5;
+  align-items: center;
+  color: #ebf2fa;
+}
+.input-data span {
+  margin-bottom: 10px;
+}
+.input-exercise,
+.input-sets,
+.input-reps {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+input {
+  border-radius: 15px;
+  border: none;
+  width: auto;
+  height: 30px;
+  padding: 15px;
+  border: 1px solid #e0e0e0;
+}
+
+input[type="text"]:focus {
+  border: 1px solid #000000;
+  outline: none;
+}
+.btn-add-img {
+  border: none;
+  background: none;
+  display: flex;
+}
+.btn-add-img img:hover {
+  cursor: pointer;
+  background: #58a1ce;
+  border-radius: 50%;
+}
+
+/* Timer
+------------------------------------*/
+.timer {
+  font-size: 110%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 90px;
+}
+
+/*  Input Timer
+------------------------------------*/
+.input-timer {
+  display: flex;
+  padding: 10px 0;
+  color: #e0e0e0;
+  align-items: center;
+}
+/*  Contador Timer
+------------------------------------*/
+.timer__count {
+  /* color: #e0e0e0; */
+  font-size: 150%;
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+  font-family: "Anton";
+}
+.stop-timer {
+  cursor: pointer;
+}
+
+/* Ejercicios Leyenda
+------------------------------------*/
+.exercise-guide {
+  display: flex;
+  text-align: center;
+  background: #0471a6;
+  padding: 10px 0;
+  font-weight: 600;
+  color: #e0e0e0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  border-top: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.exercise-guide > div {
+  flex: 0 0 25%;
+  text-align: center;
+}
+
+/* Ejercicios Detalles
+------------------------------------*/
+.exercise-detail {
+  display: flex;
+  flex: 1 0 auto;
+  min-height: 60px;
+  align-items: center;
+  text-align: center;
+  transition: all 0.1s;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+.exercise-detail > div {
+  flex: 0 0 25%;
+}
+.exercise-detail:hover {
+  background-color: rgba(224, 224, 224, 0.2);
+}
+/* 
+.exercise-detail:nth-child(even) {
+  background: #0471a6;
+} */
+.delete,
+.start,
+.rest {
+  height: 40px;
+  background: #fbfbfb;
+  border: none;
+  width: 80px;
+  transition: all 0.3s;
+}
+
+.start,
+.rest {
+  display: none;
+}
+
+.delete {
+  background: none;
+  background-image: url(../img/close-circle-outline.svg);
+  background-size: 35px;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: center;
+  width: 35px;
+}
+.start {
+  background-image: url(../img/arrow-forward.svg);
+  background-size: 25px;
+  background-repeat: no-repeat;
+  text-align: left;
+  background-position-y: center;
+  background-position-x: right;
+  padding-left: 15px;
+}
+.rest {
+  background-image: url(../img/hourglass.svg);
+  background-size: 20px;
+  background-repeat: no-repeat;
+  text-align: right;
+  background-position-y: center;
+}
+
+.delete:hover,
+.start:hover,
+.rest:hover {
+  cursor: pointer;
+}
+
+.exercise-detail-actions {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.active_element .exercise-detail-actions button {
+  display: inline-block;
+}
+
+.highlight_exercise {
+  box-shadow: inset 0 -60px 0 0 #0d47a1;
+  transition: all 0.1s ease;
+}
+
+.active_element.exercise-detail {
+  background: #0471a6;
+  transition: all 0.2s ease;
+}
+
+.active_element {
+  color: #ffffff;
+  transition: color 1s;
+}
+
+.exercise-detail-name {
+  word-break: break-all;
+}
+.exercise-name {
+  width: 100px;
+}
+/* Boton control rutina
+------------------------------------*/
+
+#btn-list-action {
+  font-weight: 600;
+  height: 40px;
+  background: #fbfbfb;
+  border: none;
+  cursor: pointer;
+  /* align-self: flex-end; */
+  margin-top: auto;
+}
+#btn-list-action:hover {
+  letter-spacing: 1px;
+  transition: all 0.3s;
+  box-shadow: inset 0 -40px 0 0 #000000;
+  color: white;
+}
+
+/* Media querys / Target principal: moviles
+------------------------------------*/
+@media screen and (min-width: 370px) {
+  .nav {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex-flow: row;
+
+    flex: 0 1 auto;
+  }
+  h1 {
+    font-size: 50px;
+  }
+  .profile {
+    margin-left: auto;
+  }
+}
+/* Azul claro #3685b5
+  Azul oscuro #0471a6
+  
+*/
